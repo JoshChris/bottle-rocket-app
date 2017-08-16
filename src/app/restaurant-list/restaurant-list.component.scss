@@ -1,0 +1,338 @@
+/* You can add global styles to this file, and also import other style files */
+@import '../../assets/sass/_vars';
+@import '../../assets/sass/_mixins';
+@import '../../assets/sass/_reset';
+
+$green: #43E895;
+$dkgreen: #34B379;
+
+header {
+	height: 65px;
+	top: 0px;
+	padding-top: 15px;
+	background: $green;
+	width: 100%;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	transition: all 300ms;
+	z-index: 500;
+
+	&.sticky {
+		padding-top: 0px;
+		height: 50px;
+	}
+
+	h1 {
+		font-family: 'Avenir Next', Helvetica, Arial, sans-serif;
+		font-weight: 600;
+		font-size: 17px;
+		color: #fff; 
+	}
+
+	nav {
+		position: absolute;
+		right: 0px;
+		bottom: 0px;
+
+		a.map {
+			display: block;
+			width: 55px;
+			height: 50px;
+			text-indent: -999em;
+			background: url(#{$imgAssetPath}/icon_map@2x.png) no-repeat 50% 50% / 30px auto;
+		}
+	}
+}
+
+p {
+	color: #2a2a2a;
+	font-size: 16px;
+	line-height: 1.5em;
+}
+
+a {
+	color: #2a2a2a;
+	text-decoration: none;
+	transition: all 350ms;
+
+	@include respond-to("large") {
+		&:hover {
+			color: $dkgreen;
+		}
+	}
+}
+
+.restaurant-list {
+	padding-top: 65px;
+
+	@include respond-to("medium") {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	@include respond-to("large") {
+		justify-content: space-around;
+		padding: 15px;
+		padding-top: 80px;
+		max-width: 1400px;
+		margin: 0 auto;
+	}
+
+	li {
+		@include respond-to("medium") {
+			width: 50%;
+			flex-grow: 1;
+		}
+
+		@include respond-to("large") {
+			width: calc((100%/3) - 30px);
+			flex-grow: 0;
+			margin-top: 15px;
+			margin-bottom: 15px;
+		}
+		
+	}
+
+	.item-hero {
+		width: 100%;
+		height: 0px;
+		padding-top: 9/16 * 100%;
+		overflow: hidden;
+		position: relative;
+		display: block;
+		cursor: pointer;
+		background: #2a2a2a;
+		transition: all 200ms ease-out;
+
+		&:before {
+			content: "";
+			display: block;
+			position: absolute;
+			bottom: 0px;
+			left: 0px;
+			width: 100%;
+			height: 100%;
+			z-index: 1;
+			background: url(#{$imgAssetPath}/cellGradientBackground@2x.png) no-repeat 50% 50% / cover;
+		}
+
+		img {
+			width: 100%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%) scale(1.01);
+			transition: all 350ms ease-out;
+		}
+
+		.title-and-cat {
+			position: absolute;
+			bottom: 6px;
+			left: 12px;
+			z-index: 100;
+			@include respond-to("medium") {
+				bottom: auto;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				text-align: center;
+				width: 100%;
+			}
+
+
+			h2 {
+				font-family: 'Avenir Next', Helvetica, Arial, sans-serif;
+				font-weight: 600;
+				font-size: 16px;
+				@include poly-fluid-sizing('font-size', (320px: 16px, 768px: 18px, 1023px: 20px, 1024px: 18px));
+				color: #fff;
+				margin-bottom: 3px;
+			}
+
+			h3 {
+				font-family: 'Avenir Next', Helvetica, Arial, sans-serif;
+				font-weight: 400;
+				font-size: 12px;
+				@include poly-fluid-sizing('font-size', (320px: 12px, 768px: 14px, 1023px: 16px, 1024px: 14px));
+				color: #fff;
+			}
+		}
+
+		@include respond-to("large") {
+			&:hover {
+				img {
+					transform: translate(-50%, -50%) scale(1.2);
+					opacity: 0.35;
+				}
+			}
+		}
+	}
+
+	.item-details {
+		max-height: 0px;
+		transition: all 500ms;
+		overflow: hidden;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		position: relative;
+		background: #000;
+
+		@include respond-to("medium") {
+			width: 80%;
+			max-width: 640px;
+			position: fixed;
+			top: -100px;
+			left: 50%;
+			transform: translateX(-50%);
+			z-index: 500;
+			opacity: 0;
+		}
+
+		@include respond-to("large") {
+			max-width: 900px;
+			padding-left: 400px;
+		}
+
+		.detail-header {
+			width: 100%;
+			height: 50px;
+			background: $green;
+			position: relative;
+
+			.close-btn {
+				display: block;
+				width: 55px;
+				border: 0px none;
+				position: absolute;
+				right: 0px;
+				top: 0px;
+				height: 50px;
+				text-indent: -999em;
+				background: url(#{$imgAssetPath}/ic_close@2x.png) no-repeat 50% 50% / 24px auto;
+				cursor: pointer;
+			}
+		}
+
+		.detail-image {
+			display: none;
+
+			@include respond-to("large") {
+				width: 400px;
+				height: 100%;
+				display: block;
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				text-align: center;
+				overflow: hidden;
+
+
+				img {
+					height: 100%;
+					left: 50%;
+					transform: translateX(-50%);
+					position: absolute;
+					opacity: 0.65;
+				}
+			}
+		}
+
+		.title-and-cat {
+			background: $dkgreen;
+			height: 60px;
+			padding-left: 12px;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			display: flex;
+			width: 100%;
+			flex-direction: row;
+			align-items: center;
+			justify-content: left;
+
+			h2 {
+				font-family: 'Avenir Next', Helvetica, Arial, sans-serif;
+				font-weight: 600;
+				font-size: 16px;
+				color: #fff;
+				margin-bottom: 3px;
+			}
+
+			h3 {
+				font-family: 'Avenir Next', Helvetica, Arial, sans-serif;
+				font-weight: 400;
+				font-size: 12px;
+				color: #fff;
+			}
+		}
+
+		.detail-wrapper {
+			padding: 16px 12px;
+			color: #2a2a2a;
+			background:#fff;
+			font-family: 'Avenir Next', Helvetica, Arial, sans-serif;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 1.5em;
+
+			.address {
+				margin-bottom: 14px;
+			}
+
+			.phone {
+				margin-bottom: 14px;
+			}
+		}
+
+	}
+
+	.open {
+
+		.item-details {
+			max-height: 1000px;
+
+			@include respond-to("medium") {
+				top: 100px;
+				opacity: 1;
+			}
+		}
+
+		@include respond-to("medium") {
+
+			&:before {
+				content: "";
+				position: fixed;
+				top: 0px;
+				left: 0px;
+				height: 100%;
+				width: 100%;
+				display: block;
+				background: rgba(0,0,0,0.5);
+				z-index: 300;
+			}
+		}
+	}
+
+	.map {
+		height: 0px;
+		padding-top: 9/16 * 100%;
+		position: relative;
+		width: 100%;
+
+		agm-map {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			right: 0px;
+			bottom: 0px;
+			height: 100%;
+			width: 100%;
+		}
+	}
+
+
+}
