@@ -2,7 +2,7 @@
     "restaurants" : [
     {
         "name": "Hopdoddy Burger Bar",
-        "backgroundImageURL": "https://nofile.io/f/UX1WLvzarqK/hopdoddy.png",
+        "backgroundImageURL": "https://raw.githubusercontent.com/JoshChris/bottle-rocket-app/master/src/assets/img/hopdoddy.png",
         "category" : "Burgers",
             "contact": {
                 "phone": "9723872337",
@@ -28,7 +28,7 @@
     },
     {
         "name": "Pappadeaux Seafood Kitchen",
-        "backgroundImageURL": "https://nofile.io/f/IqBLSn0pKQJ/pappadeaux.png",
+        "backgroundImageURL": "https://raw.githubusercontent.com/JoshChris/bottle-rocket-app/master/src/assets/img/pappadeaux.png",
         "category": "Seafood",
             "contact": {
                 "phone": "9724479616",
@@ -54,7 +54,7 @@
     },
     {
         "name": "Yard House",
-        "backgroundImageURL": "https://nofile.io/f/NsQcoYAnM6n/yardhouse.png",
+        "backgroundImageURL": "https://raw.githubusercontent.com/JoshChris/bottle-rocket-app/master/src/assets/img/yardhouse.png",
         "category": "Tap House",
             "contact": {
                 "phone": "9727164004",
@@ -82,7 +82,7 @@
     },
     {
         "name": "Pluckers Wing Bar",
-        "backgroundImageURL": "https://nofile.io/f/rsWD8ly6XEj/pluckers.png",
+        "backgroundImageURL": "https://raw.githubusercontent.com/JoshChris/bottle-rocket-app/master/src/assets/img/pluckers.png",
         "category": "Wing Joint",
             "contact": null,
             "location": {
@@ -102,7 +102,7 @@
     },
     {
         "name": "Ramen Hakata",
-        "backgroundImageURL": "https://nofile.io/f/VjZASwgiakk/ramen_hakata.png",
+        "backgroundImageURL": "https://raw.githubusercontent.com/JoshChris/bottle-rocket-app/master/src/assets/img/ramen_hakata.png",
         "category": "Japanese",
             "contact": {
                 "phone": "9722472401",
@@ -128,7 +128,7 @@
     },
     {
         "name": "Gloria's",
-        "backgroundImageURL": "https://nofile.io/f/WtX59Zyz4Xw/glorias.png",
+        "backgroundImageURL": "https://raw.githubusercontent.com/JoshChris/bottle-rocket-app/master/src/assets/img/glorias.png",
         "category": "Mexican",
             "contact": {
                 "phone": "9723878442",
@@ -156,7 +156,7 @@
     },
     {
         "name": "The Social House",
-        "backgroundImageURL": "https://nofile.io/f/GrylrXdP8yL/social_house.png",
+        "backgroundImageURL": "https:https://raw.githubusercontent.com/JoshChris/bottle-rocket-app/master/src/assets/img/GrylrXdP8yL/social_house.png",
         "category": "Bar and Grill",
             "contact": {
                 "phone": "9723924300",
@@ -180,7 +180,7 @@
     },
     {
         "name": "Chuy's",
-        "backgroundImageURL": "https://nofile.io/f/jr03OeDZhfF/chuys.png",
+        "backgroundImageURL": "https://raw.githubusercontent.com/JoshChris/bottle-rocket-app/master/src/assets/img/chuys.png",
         "category": "Tex Mex",
             "contact": null,
             "location": {
@@ -201,7 +201,7 @@
     },
     {
         "name": "Flying Saucer Draught Emporium",
-        "backgroundImageURL": "https://nofile.io/f/mGbbZRtxaA7/flying_saucer.png",
+        "backgroundImageURL": "https://raw.githubusercontent.com/JoshChris/bottle-rocket-app/master/src/assets/img/flying_saucer.png",
         "category": "Tap House",
             "contact": {
                 "phone": "9729917093",
@@ -226,7 +226,7 @@
     },
     {
         "name": "Whole Foods Market",
-        "backgroundImageURL": "https://nofile.io/f/sZxy288KIOl/whole_foods.png",
+        "backgroundImageURL": "https://raw.githubusercontent.com/JoshChris/bottle-rocket-app/master/src/assets/img/whole_foods.png",
         "category": "Prepared Eats",
             "contact": {
                 "phone": "2148543334",
@@ -252,7 +252,7 @@
     },
     {
         "name": "The Londoner",
-        "backgroundImageURL": "https://nofile.io/f/JLSQehf6bsa/the_londoner.png",
+        "backgroundImageURL": "https://raw.githubusercontent.com/JoshChris/bottle-rocket-app/master/src/assets/img/the_londoner.png",
         "category": "Pub",
             "contact": {
                 "phone": "9724582444",
@@ -277,7 +277,7 @@
     },
     {
         "name": "The Original Pancake House",
-        "backgroundImageURL": "https://nofile.io/f/3LL3Q7cxEQ0/original_pancake_house.png",
+        "backgroundImageURL": "https://raw.githubusercontent.com/JoshChris/bottle-rocket-app/master/src/assets/img/original_pancake_house.png",
         "category": "Coffee and Breakfast",
             "contact": {
                 "phone": "9723856468",
@@ -302,7 +302,7 @@
     },
     {
         "name": "Thai Star",
-        "backgroundImageURL": "https://nofile.io/f/mAi1xHquZXB/thai_star.png",
+        "backgroundImageURL": "https://raw.githubusercontent.com/JoshChris/bottle-rocket-app/master/src/assets/img/thai_star.png",
         "category": "Thai",
             "contact": {
                 "phone": "9729916334",
@@ -327,7 +327,7 @@
     },
     {
         "name": "In-N-Out Burger",
-        "backgroundImageURL": "https://nofile.io/f/SaGQ2julJUT/in_n_out_burger.png",
+        "backgroundImageURL": "https://raw.githubusercontent.com/JoshChris/bottle-rocket-app/master/src/assets/img/in_n_out_burger.png",
         "category": "Fast Food Burgers",
             "contact": {
                 "phone": "8007861000",
@@ -353,7 +353,7 @@
     },
     {
         "name": "Buffalo Wild Wings",
-        "backgroundImageURL": "https://nofile.io/f/Nk7kruZ7dxB/buffalo_wild_wings.png",
+        "backgroundImageURL": "https://raw.githubusercontent.com/JoshChris/bottle-rocket-app/master/src/assets/img/buffalo_wild_wings.png",
         "category": "Wing Joint",
             "contact": {
                 "phone": "9727019464",
