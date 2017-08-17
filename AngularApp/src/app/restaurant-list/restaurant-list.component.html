@@ -1,0 +1,48 @@
+<header StickyScrollDirective>
+    <h1>Lunch Tyme</h1>
+    <nav>
+        <a class="map" href="./map">Map</a>
+    </nav>
+</header>
+<section *ngIf="isLoading && !errorMessage">
+Loading restaurant list...
+</section>
+<ul class="restaurant-list">
+    <li *ngFor="let restaurant of restaurants" [class.open]="restaurant.active">
+        <div class="item-hero isToggle" #item id="{{restaurant.name | slug}}" [ngx-scroll-to]=item.id [ngx-scroll-to-offset]="-50" (click)="restaurant.active = !restaurant.active">
+            <img src="{{restaurant.backgroundImageURL}}" alt="{{restaurant.name}}" />
+            <div class="title-and-cat">
+                <h2>{{restaurant.name}}</h2>
+                <h3>{{restaurant.category}}</h3>
+            </div>
+        </div>
+        <div class="item-details">
+            <div class="detail-header">
+                <button (click)="restaurant.active = !restaurant.active" class="close-btn">Close</button>
+            </div>
+            <div class="detail-image"><img src="{{restaurant.backgroundImageURL}}" alt="{{restaurant.name}}" /></div>
+            <div class="map">
+                <agm-map [latitude]="restaurant.location.lat" [longitude]="restaurant.location.lng" [zoom]="zoom" [scrollwheel]="scrollwheel" [styles]="mapStyle">
+                    <agm-marker [latitude]="restaurant.location.lat" [longitude]="restaurant.location.lng" [iconUrl]="iconUrl"></agm-marker>
+                </agm-map>
+            </div>
+            <div class="title-and-cat">
+                <div class="wrapper">
+                <h2>{{restaurant.name}}</h2>
+                <h3>{{restaurant.category}}</h3>
+                </div>
+            </div>
+            <div class="detail-wrapper">
+                <p class="address">
+                    <span *ngIf="restaurant.location && restaurant.location.formattedAddress[0]">{{restaurant.location.formattedAddress[0]}}</span><br/>
+                    <span *ngIf="restaurant.location && restaurant.location.formattedAddress[1]">{{restaurant.location.formattedAddress[1]}}</span>
+                </p>
+                <p *ngIf="restaurant.contact && restaurant.contact.formattedPhone" class="phone">{{restaurant.contact.formattedPhone}}</p>
+                <p *ngIf="restaurant.contact && restaurant.contact.twitter" class="twitter"><a target="_blank" href="http://www.twitter.com/{{restaurant.contact.twitter}}">@{{restaurant.contact.twitter}}</a></p>
+            </div>
+        </div>
+    </li>
+</ul>
+<section *ngIf="errorMessage">
+    {{errorMessage}}
+</section>

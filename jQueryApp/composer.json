@@ -1,0 +1,9 @@
+{
+    "name": "josh/bottle-rocket",
+    "description": "Web App Example Project",
+    "type": "project",
+    "require": {
+        "league/plates": "^3.3",
+        "noahbuscher/macaw": "dev-master"
+    }
+}

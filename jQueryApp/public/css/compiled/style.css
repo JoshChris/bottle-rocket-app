@@ -1,0 +1,839 @@
+/* line 1, ../source/partials/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 21, ../source/partials/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 25, ../source/partials/_reset.scss */
+body {
+  line-height: 1;
+  -webkit-text-size-adjust: none;
+}
+
+/* line 29, ../source/partials/_reset.scss */
+body, html {
+  width: 100%;
+}
+
+/* line 32, ../source/partials/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 35, ../source/partials/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 38, ../source/partials/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 43, ../source/partials/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 47, ../source/partials/_reset.scss */
+input {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -khtml-border-radius: 0;
+  border-radius: 0;
+}
+
+/* line 52, ../source/partials/_reset.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Avenir Next';
+  src: url("../../fonts/AvenirNext/AvenirNextRegular.eot");
+  src: url("../../fonts/AvenirNext/AvenirNextRegular.eot?#iefix") format("embedded-opentype"), url("../../fonts/AvenirNext/AvenirNextRegular.woff") format("woff"), url("../../fonts/AvenirNext/AvenirNextRegular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir Next';
+  src: url("../../fonts/AvenirNext/AvenirNextDemiBold.eot");
+  src: url("../../fonts/AvenirNext/AvenirNextDemiBold.eot?#iefix") format("embedded-opentype"), url("../../fonts/AvenirNext/AvenirNextDemiBold.woff") format("woff"), url("../../fonts/AvenirNext/AvenirNextDemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+/* line 3, ../source/partials/_app.scss */
+header {
+  height: 65px;
+  top: 0px;
+  padding-top: 15px;
+  background: #43E895;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  transition: all 300ms;
+  z-index: 500;
+}
+/* line 17, ../source/partials/_app.scss */
+header.sticky {
+  padding-top: 0px;
+  height: 50px;
+}
+/* line 22, ../source/partials/_app.scss */
+header h1 {
+  font-family: 'Avenir Next', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  color: #fff;
+}
+/* line 29, ../source/partials/_app.scss */
+header nav {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+/* line 34, ../source/partials/_app.scss */
+header nav a.map {
+  display: block;
+  width: 55px;
+  height: 50px;
+  text-indent: -999em;
+  background: url(../../img/icon_map@2x.png) no-repeat 50% 50%/30px auto;
+}
+/* line 42, ../source/partials/_app.scss */
+header nav a.list {
+  display: block;
+  width: 55px;
+  height: 50px;
+  text-indent: -999em;
+  background: url(../../img/icon_list@2x.png) no-repeat 50% 50%/30px auto;
+}
+
+/* line 52, ../source/partials/_app.scss */
+p {
+  color: #2a2a2a;
+  font-size: 16px;
+  line-height: 1.5em;
+}
+
+/* line 58, ../source/partials/_app.scss */
+a {
+  color: #2a2a2a;
+  text-decoration: none;
+  transition: all 350ms;
+}
+@media (min-width: 1024px) {
+  /* line 64, ../source/partials/_app.scss */
+  a:hover {
+    color: #34B379;
+  }
+}
+
+/* line 70, ../source/partials/_app.scss */
+.access_error {
+  width: 100%;
+  padding: 20px;
+  color: #fff;
+  background-color: #c00;
+  font-family: 'Avenir Next';
+  font-size: 16px;
+  font-weight: 400;
+  padding-top: 85px;
+  text-align: center;
+  margin-bottom: -65px;
+}
+
+/* line 84, ../source/partials/_app.scss */
+.list-view .restaurant-list {
+  padding-top: 65px;
+}
+@media (min-width: 768px) {
+  /* line 84, ../source/partials/_app.scss */
+  .list-view .restaurant-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media (min-width: 1024px) {
+  /* line 84, ../source/partials/_app.scss */
+  .list-view .restaurant-list {
+    justify-content: space-around;
+    padding: 15px;
+    padding-top: 80px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 768px) {
+  /* line 100, ../source/partials/_app.scss */
+  .list-view .restaurant-list li {
+    width: 50%;
+    flex-grow: 1;
+  }
+}
+@media (min-width: 1024px) {
+  /* line 100, ../source/partials/_app.scss */
+  .list-view .restaurant-list li {
+    width: calc((100%/3) - 30px);
+    flex-grow: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+/* line 115, ../source/partials/_app.scss */
+.list-view .restaurant-list .item-hero {
+  width: 100%;
+  height: 0px;
+  padding-top: 56.25%;
+  overflow: hidden;
+  position: relative;
+  display: block;
+  cursor: pointer;
+  background: #2a2a2a;
+  transition: all 200ms ease-out;
+}
+/* line 126, ../source/partials/_app.scss */
+.list-view .restaurant-list .item-hero:before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: url(../../img/cellGradientBackground@2x.png) no-repeat 50% 50%/cover;
+}
+/* line 138, ../source/partials/_app.scss */
+.list-view .restaurant-list .item-hero img {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.01);
+  transition: all 350ms ease-out;
+}
+/* line 147, ../source/partials/_app.scss */
+.list-view .restaurant-list .item-hero .title-and-cat {
+  position: absolute;
+  bottom: 6px;
+  left: 12px;
+  z-index: 100;
+}
+@media (min-width: 768px) {
+  /* line 147, ../source/partials/_app.scss */
+  .list-view .restaurant-list .item-hero .title-and-cat {
+    bottom: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+  }
+}
+/* line 162, ../source/partials/_app.scss */
+.list-view .restaurant-list .item-hero .title-and-cat h2 {
+  font-family: 'Avenir Next', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 3px;
+}
+@media (min-width: 320px) {
+  /* line 162, ../source/partials/_app.scss */
+  .list-view .restaurant-list .item-hero .title-and-cat h2 {
+    font-size: calc(0.4464285714vw + 14.5714285714px);
+  }
+}
+@media (min-width: 768px) {
+  /* line 162, ../source/partials/_app.scss */
+  .list-view .restaurant-list .item-hero .title-and-cat h2 {
+    font-size: calc(0.7843137255vw + 11.9764705882px);
+  }
+}
+@media (min-width: 1023px) {
+  /* line 162, ../source/partials/_app.scss */
+  .list-view .restaurant-list .item-hero .title-and-cat h2 {
+    font-size: calc(-200vw + 2066px);
+  }
+}
+@media (min-width: 1024px) {
+  /* line 162, ../source/partials/_app.scss */
+  .list-view .restaurant-list .item-hero .title-and-cat h2 {
+    font-size: 18px;
+  }
+}
+/* line 171, ../source/partials/_app.scss */
+.list-view .restaurant-list .item-hero .title-and-cat h3 {
+  font-family: 'Avenir Next', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  font-size: 12px;
+  color: #fff;
+}
+@media (min-width: 320px) {
+  /* line 171, ../source/partials/_app.scss */
+  .list-view .restaurant-list .item-hero .title-and-cat h3 {
+    font-size: calc(0.4464285714vw + 10.5714285714px);
+  }
+}
+@media (min-width: 768px) {
+  /* line 171, ../source/partials/_app.scss */
+  .list-view .restaurant-list .item-hero .title-and-cat h3 {
+    font-size: calc(0.7843137255vw + 7.9764705882px);
+  }
+}
+@media (min-width: 1023px) {
+  /* line 171, ../source/partials/_app.scss */
+  .list-view .restaurant-list .item-hero .title-and-cat h3 {
+    font-size: calc(-200vw + 2062px);
+  }
+}
+@media (min-width: 1024px) {
+  /* line 171, ../source/partials/_app.scss */
+  .list-view .restaurant-list .item-hero .title-and-cat h3 {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1024px) {
+  /* line 182, ../source/partials/_app.scss */
+  .list-view .restaurant-list .item-hero:hover img {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.35;
+  }
+}
+/* line 190, ../source/partials/_app.scss */
+.list-view .restaurant-list .item-details {
+  max-height: 0px;
+  transition: all 500ms;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  background: #000;
+}
+@media (min-width: 768px) {
+  /* line 190, ../source/partials/_app.scss */
+  .list-view .restaurant-list .item-details {
+    width: 80%;
+    max-width: 640px;
+    position: fixed;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 500;
+    opacity: 0;
+  }
+}
+@media (min-width: 1024px) {
+  /* line 190, ../source/partials/_app.scss */
+  .list-view .restaurant-list .item-details {
+    max-width: 900px;
+    padding-left: 400px;
+  }
+}
+/* line 216, ../source/partials/_app.scss */
+.list-view .restaurant-list .item-details .detail-header {
+  width: 100%;
+  height: 50px;
+  background: #43E895;
+  position: relative;
+}
+/* line 222, ../source/partials/_app.scss */
+.list-view .restaurant-list .item-details .detail-header .close-btn {
+  display: block;
+  width: 55px;
+  border: 0px none;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 50px;
+  text-indent: -999em;
+  background: url(../../img/ic_close@2x.png) no-repeat 50% 50%/24px auto;
+  cursor: pointer;
+}
+/* line 236, ../source/partials/_app.scss */
+.list-view .restaurant-list .item-details .detail-image {
+  display: none;
+}
+@media (min-width: 1024px) {
+  /* line 236, ../source/partials/_app.scss */
+  .list-view .restaurant-list .item-details .detail-image {
+    width: 400px;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    text-align: center;
+    overflow: hidden;
+  }
+  /* line 250, ../source/partials/_app.scss */
+  .list-view .restaurant-list .item-details .detail-image img {
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0.65;
+  }
+}
+/* line 260, ../source/partials/_app.scss */
+.list-view .restaurant-list .item-details .title-and-cat {
+  background: #34B379;
+  height: 60px;
+  padding-left: 12px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+}
+/* line 273, ../source/partials/_app.scss */
+.list-view .restaurant-list .item-details .title-and-cat h2 {
+  font-family: 'Avenir Next', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 3px;
+}
+/* line 281, ../source/partials/_app.scss */
+.list-view .restaurant-list .item-details .title-and-cat h3 {
+  font-family: 'Avenir Next', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: #fff;
+}
+/* line 289, ../source/partials/_app.scss */
+.list-view .restaurant-list .item-details .detail-wrapper {
+  padding: 16px 12px;
+  color: #2a2a2a;
+  background: #fff;
+  font-family: 'Avenir Next', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5em;
+}
+/* line 298, ../source/partials/_app.scss */
+.list-view .restaurant-list .item-details .detail-wrapper .address {
+  margin-bottom: 14px;
+}
+/* line 302, ../source/partials/_app.scss */
+.list-view .restaurant-list .item-details .detail-wrapper .phone {
+  margin-bottom: 14px;
+}
+/* line 311, ../source/partials/_app.scss */
+.list-view .restaurant-list .open .item-details {
+  max-height: 1000px;
+}
+@media (min-width: 768px) {
+  /* line 311, ../source/partials/_app.scss */
+  .list-view .restaurant-list .open .item-details {
+    top: 100px;
+    opacity: 1;
+  }
+}
+@media (min-width: 1024px) {
+  /* line 311, ../source/partials/_app.scss */
+  .list-view .restaurant-list .open .item-details {
+    top: 75px;
+  }
+}
+@media (min-width: 1280px) {
+  /* line 311, ../source/partials/_app.scss */
+  .list-view .restaurant-list .open .item-details {
+    top: 100px;
+  }
+}
+@media (min-width: 768px) {
+  /* line 330, ../source/partials/_app.scss */
+  .list-view .restaurant-list .open:before {
+    content: "";
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    display: block;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 300;
+  }
+}
+/* line 344, ../source/partials/_app.scss */
+.list-view .restaurant-list .map {
+  height: 0px;
+  padding-top: 56.25%;
+  position: relative;
+  width: 100%;
+}
+/* line 350, ../source/partials/_app.scss */
+.list-view .restaurant-list .map agm-map {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 363, ../source/partials/_app.scss */
+.map-view {
+  display: flex;
+}
+/* line 366, ../source/partials/_app.scss */
+.map-view #map {
+  width: 100%;
+  overflow: hidden;
+  height: calc(100vh - 65px);
+  margin-top: 65px;
+  order: 2;
+}
+/* line 373, ../source/partials/_app.scss */
+.map-view #map agm-map {
+  height: 100%;
+}
+@media (min-width: 768px) {
+  /* line 366, ../source/partials/_app.scss */
+  .map-view #map {
+    width: 60%;
+  }
+}
+@media (min-width: 1024px) {
+  /* line 366, ../source/partials/_app.scss */
+  .map-view #map {
+    width: 67%;
+  }
+}
+@media (min-width: 1280px) {
+  /* line 366, ../source/partials/_app.scss */
+  .map-view #map {
+    width: 75%;
+  }
+}
+/* line 389, ../source/partials/_app.scss */
+.map-view #map .map-info {
+  max-width: 300px;
+}
+/* line 391, ../source/partials/_app.scss */
+.map-view #map .map-info h1 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-family: 'Avenir Next', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+}
+/* line 398, ../source/partials/_app.scss */
+.map-view #map .map-info h2 {
+  font-size: 16px;
+  font-family: 'Avenir Next', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+/* line 404, ../source/partials/_app.scss */
+.map-view #map .map-info .restaurant-image {
+  max-width: 200px;
+  margin-bottom: 20px;
+  border-radius: 3px;
+}
+/* line 412, ../source/partials/_app.scss */
+.map-view .restaurant-list {
+  width: 0;
+  order: 1;
+  height: calc(100vh - 65px);
+  overflow: hidden;
+  margin-top: 65px;
+}
+@media (min-width: 768px) {
+  /* line 412, ../source/partials/_app.scss */
+  .map-view .restaurant-list {
+    width: 40%;
+    overflow-y: scroll;
+  }
+}
+@media (min-width: 1024px) {
+  /* line 412, ../source/partials/_app.scss */
+  .map-view .restaurant-list {
+    width: 33%;
+  }
+}
+@media (min-width: 1280px) {
+  /* line 412, ../source/partials/_app.scss */
+  .map-view .restaurant-list {
+    width: 25%;
+  }
+}
+/* line 432, ../source/partials/_app.scss */
+.map-view .restaurant-list li {
+  border-bottom: 1px solid #efefef;
+}
+/* line 436, ../source/partials/_app.scss */
+.map-view .restaurant-list .item-hero {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  display: block;
+  cursor: pointer;
+  background: #fff;
+  transition: all 200ms ease-out;
+  padding: 10px 77px 10px 12px;
+}
+/* line 447, ../source/partials/_app.scss */
+.map-view .restaurant-list .item-hero .image {
+  width: 65px;
+  height: 65px;
+  overflow: hidden;
+  position: absolute;
+  right: 12px;
+}
+/* line 454, ../source/partials/_app.scss */
+.map-view .restaurant-list .item-hero .image img {
+  height: 65px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+}
+/* line 462, ../source/partials/_app.scss */
+.map-view .restaurant-list .item-hero .title-and-cat {
+  height: 65px;
+  display: flex;
+  align-items: center;
+}
+/* line 467, ../source/partials/_app.scss */
+.map-view .restaurant-list .item-hero .title-and-cat h2 {
+  font-family: 'Avenir Next', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  font-size: 16px;
+  color: #2a2a2a;
+  margin-bottom: 3px;
+}
+@media (min-width: 320px) {
+  /* line 467, ../source/partials/_app.scss */
+  .map-view .restaurant-list .item-hero .title-and-cat h2 {
+    font-size: calc(0.4464285714vw + 14.5714285714px);
+  }
+}
+@media (min-width: 768px) {
+  /* line 467, ../source/partials/_app.scss */
+  .map-view .restaurant-list .item-hero .title-and-cat h2 {
+    font-size: calc(0.7843137255vw + 11.9764705882px);
+  }
+}
+@media (min-width: 1023px) {
+  /* line 467, ../source/partials/_app.scss */
+  .map-view .restaurant-list .item-hero .title-and-cat h2 {
+    font-size: calc(-200vw + 2066px);
+  }
+}
+@media (min-width: 1024px) {
+  /* line 467, ../source/partials/_app.scss */
+  .map-view .restaurant-list .item-hero .title-and-cat h2 {
+    font-size: 18px;
+  }
+}
+/* line 476, ../source/partials/_app.scss */
+.map-view .restaurant-list .item-hero .title-and-cat h3 {
+  font-family: 'Avenir Next', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  font-size: 12px;
+  color: #2a2a2a;
+}
+@media (min-width: 320px) {
+  /* line 476, ../source/partials/_app.scss */
+  .map-view .restaurant-list .item-hero .title-and-cat h3 {
+    font-size: calc(0.4464285714vw + 10.5714285714px);
+  }
+}
+@media (min-width: 768px) {
+  /* line 476, ../source/partials/_app.scss */
+  .map-view .restaurant-list .item-hero .title-and-cat h3 {
+    font-size: calc(0.7843137255vw + 7.9764705882px);
+  }
+}
+@media (min-width: 1023px) {
+  /* line 476, ../source/partials/_app.scss */
+  .map-view .restaurant-list .item-hero .title-and-cat h3 {
+    font-size: calc(-200vw + 2062px);
+  }
+}
+@media (min-width: 1024px) {
+  /* line 476, ../source/partials/_app.scss */
+  .map-view .restaurant-list .item-hero .title-and-cat h3 {
+    font-size: 14px;
+  }
+}
+/* line 486, ../source/partials/_app.scss */
+.map-view .restaurant-list .item-details {
+  max-height: 0px;
+  transition: all 500ms;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  background: #000;
+  width: 100%;
+  max-width: 640px;
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 500;
+  opacity: 0;
+}
+@media (min-width: 768px) {
+  /* line 486, ../source/partials/_app.scss */
+  .map-view .restaurant-list .item-details {
+    width: 80%;
+    max-width: 640px;
+    position: fixed;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 500;
+    opacity: 0;
+  }
+}
+/* line 516, ../source/partials/_app.scss */
+.map-view .restaurant-list .item-details .detail-image {
+  width: 100%;
+  height: 0px;
+  padding-top: 56.25%;
+  position: relative;
+}
+/* line 522, ../source/partials/_app.scss */
+.map-view .restaurant-list .item-details .detail-image img {
+  height: 100%;
+  left: 50%;
+  top: 0px;
+  transform: translateX(-50%);
+  position: absolute;
+}
+/* line 531, ../source/partials/_app.scss */
+.map-view .restaurant-list .item-details .title-and-cat {
+  background: #34B379;
+  height: 60px;
+  padding-left: 12px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  position: relative;
+}
+/* line 545, ../source/partials/_app.scss */
+.map-view .restaurant-list .item-details .title-and-cat h2 {
+  font-family: 'Avenir Next', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 3px;
+}
+/* line 553, ../source/partials/_app.scss */
+.map-view .restaurant-list .item-details .title-and-cat h3 {
+  font-family: 'Avenir Next', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: #fff;
+}
+/* line 560, ../source/partials/_app.scss */
+.map-view .restaurant-list .item-details .title-and-cat .close-btn {
+  display: block;
+  width: 55px;
+  border: 0px none;
+  position: absolute;
+  right: 0px;
+  top: 5px;
+  height: 50px;
+  text-indent: -999em;
+  background: url(../../img/ic_close@2x.png) no-repeat 50% 50%/24px auto;
+  cursor: pointer;
+}
+/* line 574, ../source/partials/_app.scss */
+.map-view .restaurant-list .item-details .detail-wrapper {
+  padding: 16px 12px;
+  color: #2a2a2a;
+  background: #fff;
+  font-family: 'Avenir Next', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5em;
+}
+/* line 583, ../source/partials/_app.scss */
+.map-view .restaurant-list .item-details .detail-wrapper .address {
+  margin-bottom: 14px;
+}
+/* line 587, ../source/partials/_app.scss */
+.map-view .restaurant-list .item-details .detail-wrapper .phone {
+  margin-bottom: 14px;
+}
+/* line 596, ../source/partials/_app.scss */
+.map-view .restaurant-list .open .item-details {
+  max-height: 1000px;
+  top: 50px;
+  opacity: 1;
+}
+@media (min-width: 1024px) {
+  /* line 596, ../source/partials/_app.scss */
+  .map-view .restaurant-list .open .item-details {
+    top: 50px;
+  }
+}
+@media (min-width: 1280px) {
+  /* line 596, ../source/partials/_app.scss */
+  .map-view .restaurant-list .open .item-details {
+    top: 100px;
+  }
+}
+/* line 611, ../source/partials/_app.scss */
+.map-view .restaurant-list .open:before {
+  content: "";
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  display: block;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 300;
+}
+
+/*# sourceMappingURL=style.css.map */

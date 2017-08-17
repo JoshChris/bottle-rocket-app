@@ -1,0 +1,11 @@
+$breakpoints: (
+	'small': (min-width: 480px),
+	'medium': (min-width: 768px),
+	'large': (min-width: 1024px),
+	'huge': (min-width: 1280px)
+);
+
+$green: #43E895;
+$dkgreen: #34B379;
+
+$imgAssetPath: "../../img";
